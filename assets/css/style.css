@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: "Roboto Mono",sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: darkblue;
+    color: white;
+    /* border: 3px black solid; */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+}
+
+.searchBtn {
+    display: block;
+    background-color: rgb(70, 70, 248);
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.forecastDiv {
+    height: 26vh;
+    width: 13vw;
+    /* border: 3px black solid; */
+    background-color: darkblue;
+    color: white;
+    border-radius: 5px;
+    margin: 3px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#sidebar {
+    justify-content: flex-start;
+    display: flex;
+    /* border: 3px black solid; */
+    flex-direction: column;
+
+    width: 20vw;
+    min-height: 90vh;
+
+    position: absolute;
+    left: 0;
+    top: 10vh;
+
+    padding: 1%;
+
+    justify-content: center;
+}
+
+#search {
+    /* border: 3px black solid; */
+    margin: 0;
+    width: 100%;
+    min-height: 20vh;
+    border-bottom: 2px rgb(100, 100, 100) solid;
+}
+
+#searchBox{
+    width: 100%;
+}
+
+#searchHistory {
+    /* border: 3px black solid; */
+    width: 100%;
+    min-height: 60vh;
+}
+
+#mainCard {
+    display: flex;
+    margin: 1%;
+    margin-top: 3%;
+    margin-left: 3%;
+    min-height: 45vh;
+    min-width: 75vw;
+    border: 2px rgb(100, 100, 100) solid;
+    border-radius: 5px;
+}
+
+#mainCard h2 {
+    margin-left: 2%;
+}
+
+#forecast {
+    /* border: 3px black solid; */
+    display: flex;
+    margin: 1%;
+    margin-top: 0%;
+    margin-left: 3%;
+    min-height: 37vh;
+    min-width: 75vw;
+    flex-direction: column;
+}
+
+#forecast h3 {
+    margin-left: 2%;
+    display: inline;
+}
+
+#forecastCards {
+    display: flex;
+    flex-direction: row;
+}
