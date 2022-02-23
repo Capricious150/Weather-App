@@ -148,6 +148,9 @@ function geoFetch(event){
 
                 }
 
+                // Around here is where I would like to build out some functionality for search-history buttons. 
+                // Unfortunately, real-life didn't permit me to have the time necessary to do so in this submission, but God willing
+                // I may find the time to touch it up and resubmit at a later date should the need arise.
             })
 
             
