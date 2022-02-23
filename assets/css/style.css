@@ -48,6 +48,8 @@ main {
     margin: 3px;
     margin-left: 6px;
     margin-right: 6px;
+    padding: 6px;
+    font-size: 80%;
 }
 
 #sidebar {

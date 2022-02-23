@@ -87,9 +87,39 @@ function geoFetch(event){
                 $(".wind").text("Wind Speed: " + response2.current.wind_speed + "mph");
                 $(".uvi").text("UV Index: " + response2.current.uvi);
 
-                console.log($(".temp").text())
 
+                if (response2.current.uvi < 2){
+                    $(".uvi").css("background-color", "green", "color", "white")
+                } else if (response2.current.uvi > 5){
+                    $(".uvi").css("background-color", "red", "color", "white")
+                } else {$(".uvi").css("background-color", "yellow")}
 
+                // Now we build the forecast cards
+
+                var forecastEl = $("#forecastCards")
+                forecastEl.empty();
+
+                for (let i = 0; i < 5; i++) {
+                    forecastEl.append($("<div class='forecastDiv'></div>"))                    
+                }
+
+                
+                var forcastDivsEl = $(".forecastDiv");
+                var pEl = $('<p>')
+                
+                for (let i = 0; i < 5; i++) {
+
+                    var dateTime = eval(response2.daily[i].dt*1000);
+                    var fixedDate = new Date(dateTime);
+                    var fixedDateDay = (fixedDate.getMonth()+1)+"/"+(fixedDate.getDate()+1);
+                    console.log(fixedDateDay);
+                    
+                    forcastDivsEl.eq(i).append("<p>"+fixedDateDay+"</p>")
+                    .append("<p>Temp: "+response2.daily[i].temp.day+"</p>")
+                    .append("<p>Wind: "+response2.daily[i].wind_speed+"mph</p>")
+                    .append("<p>Humidity: "+response2.daily[i].humidity+"</p>")
+
+                }
     
 
 
